@@ -12,3 +12,7 @@ def transmit_to_space(message):
 
 
 print(transmit_to_space("Test message"))
+"""
+"Test message" будет выведено только 1 раз внутри функции data_transmitter
+print(transmit_to_space("Test message")) выведет None поскольку во всех вложенных функциях нет return
+"""
