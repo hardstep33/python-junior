@@ -5,20 +5,20 @@ class Multiplier:
         self.__value = value * self.mult
 
     @staticmethod
-    def convert_to_mult(other):
+    def convert_for_mult(other):
         return other.get_value() if isinstance(other, Multiplier) else other
 
     def __add__(self, other):
-        return Multiplier(self.__value + self.convert_to_mult(other))
+        return Multiplier(self.__value + self.convert_for_mult(other))
 
     def __truediv__(self, other):
-        return Multiplier(self.__value / self.convert_to_mult(other))
+        return Multiplier(self.__value / self.convert_for_mult(other))
 
     def __mul__(self, other):
-        return Multiplier(self.__value * self.convert_to_mult(other))
+        return Multiplier(self.__value * self.convert_for_mult(other))
 
     def __sub__(self, other):
-        return Multiplier(self.__value - self.convert_to_mult(other))
+        return Multiplier(self.__value - self.convert_for_mult(other))
 
     def get_value(self):
         return self.__value
