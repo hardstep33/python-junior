@@ -6,13 +6,13 @@ class WorkerManager(models.Manager):
     """
     Менеджер для работы с активными сотрудниками
     """
+
     def get_queryset(self):
         """
         Переопределенный кверисет с фильтрацией сотрудников с заданной датой принятия на работу и с не пустым табельным номером отличным от 0
         """
 
         raise NotImplementedError
-
 
     def get_workers_info(self):
         """
